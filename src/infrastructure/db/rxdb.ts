@@ -5,7 +5,7 @@ if (typeof process === "undefined") {
   process.env.NODE_ENV = "development";
 }
 
-import { createRxDatabase, addRxPlugin } from "rxdb";
+import { createRxDatabase, addRxPlugin, RxCollection, RxDatabase } from "rxdb";
 import { getRxStorageDexie } from "rxdb/plugins/storage-dexie";
 
 // Plugins
@@ -14,6 +14,12 @@ import { RxDBUpdatePlugin } from "rxdb/plugins/update";
 import { RxDBQueryBuilderPlugin } from "rxdb/plugins/query-builder";
 
 import { commentSchema } from "./comment.schema";
+
+export type Collections = {
+  comments: RxCollection<Comment>;
+};
+
+export type CommentsDatabase = RxDatabase<Collections>;
 
 // Register plugins only once per process
 if (!(globalThis as any).__RXDB_PLUGINS_REGISTERED__) {
