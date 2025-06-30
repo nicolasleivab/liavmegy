@@ -1,0 +1,102 @@
+.commentsContainer {
+  max-width: 37.5rem;
+  margin: var(--space-xl) auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--color-shadow);
+  padding: var(--space-xl) var(--space-lg);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.commentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.commentItem {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-md);
+  border-left: 0.125rem solid var(--color-border);
+  overflow: visible;
+}
+
+.commentHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.commentText {
+  flex: 1 1 0%;
+  min-width: 0;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: var(--space-sm) 0 0 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  display: block;
+  /* background: rgba(255,0,0,0.1); */
+}
+
+.commentActions {
+  margin-top: var(--space-xs);
+  padding-right: var(--space-xs);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.addCommentForm {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  align-items: center;
+  max-width: 37.5rem;
+  padding-right: var(--space-xs);
+}
+
+.addCommentInput {
+  flex: 1 1 auto;
+  padding: var(--space-sm) var(--space-md);
+  border: 0.0625rem solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  max-height: 1.95rem;
+}
+
+.nested {
+  margin-left: var(--space-lg);
+  max-width: calc(100% - var(--space-lg));
+  overflow: visible;
+}
+
+.repliesAccordion {
+  margin-top: var(--space-sm);
+  margin-left: 0;
+}
+
+.repliesToggle {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.95em;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: var(--space-xs);
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.repliesToggle:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.repliesContent {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+  will-change: max-height, opacity;
+}
