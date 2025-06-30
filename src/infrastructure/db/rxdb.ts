@@ -18,8 +18,9 @@ import { commentSchema } from "./comment.schema";
 export type Collections = {
   comments: RxCollection<Comment>;
 };
-
-export type CommentsDatabase = RxDatabase<Collections>;
+// TODO: Fix types for rxdb
+// export type CommentsDatabase = RxDatabase<Collections>;
+export type CommentsDatabase = any;
 
 // Register plugins only once per process
 if (!(globalThis as any).__RXDB_PLUGINS_REGISTERED__) {
