@@ -26,7 +26,7 @@ export async function addComment({
       createdAt: now,
       updatedAt: now,
       vectorClock,
-    });
+    } as Comment);
     if (inputRef && inputRef.current) inputRef.current.focus();
   } catch (err) {
     console.error("Error inserting comment:", err);
