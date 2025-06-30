@@ -1,16 +1,17 @@
 {
-  "name": "offline-comments",
+  "name": "autarc-prep",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "description": "",
   "dependencies": {
     "dexie": "^3.2.0",
@@ -20,11 +21,18 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^4.0.0",
+    "jest": "^30.0.3",
+    "jest-environment-jsdom": "^30.0.2",
+    "ts-jest": "^29.4.0",
     "typescript": "^5.0.0",
-    "vite": "^5.0.0"
+    "vite": "^6.3.5"
   }
 }
