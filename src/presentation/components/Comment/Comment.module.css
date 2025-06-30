@@ -18,18 +18,28 @@
   margin-bottom: var(--space-md);
   padding-left: var(--space-md);
   border-left: 0.125rem solid var(--color-border);
+  overflow: visible;
 }
 
 .commentHeader {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
 }
 
 .commentText {
+  flex: 1 1 0%;
+  min-width: 0;
   font-size: 1rem;
   color: var(--color-text);
   margin: var(--space-sm) 0 0 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  display: block;
+  /* background: rgba(255,0,0,0.1); */
 }
 
 .commentActions {
@@ -59,6 +69,8 @@
 
 .nested {
   margin-left: var(--space-lg);
+  max-width: calc(100% - var(--space-lg));
+  overflow: visible;
 }
 
 .repliesAccordion {
